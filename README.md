@@ -12,9 +12,7 @@ System rozporzedzony składający się z dwóch niezależnych mikroserwisów kom
 - requests
 
 ## Instalacja
-
 1. Zainstaluj zależności:
-
 2. Pobierz pliki z repozytorium:
 
 ## Uruchomienie
@@ -29,7 +27,6 @@ System rozporzedzony składający się z dwóch niezależnych mikroserwisów kom
 
 **Serwis Produktów:**
 curl http://localhost:8001/products/1
-
 **Odpowiedź:**
 {"id": 1, "name": "Laptop", "price": 4500.0}
 
@@ -43,17 +40,16 @@ curl http://localhost:8002/stock/1
 
 **Serwis Produktów:**
 curl http://localhost:8001/products/10
-
 **Odpowiedź:**
 {"description": "Product not found", "status": 404}
+
 **Serwis Magazynowy:**
 curl http://localhost:8002/stock/10
-
-
 **Odpowiedź:**
 {"description": "Product not found in product service", "status": 404}
-## Architektura
 
+
+## Architektura
 Client
 |
 └─→ Stock Service (port 8002)
