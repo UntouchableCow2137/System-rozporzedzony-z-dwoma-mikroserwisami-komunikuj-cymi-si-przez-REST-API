@@ -2,7 +2,7 @@ from flask import Flask, jsonify, abort
 
 app = Flask(__name__)
 
-# Dane produktów przechowywane "na sztywno"
+
 products = {
     1: {"id": 1, "name": "Laptop", "price": 4500.00},
     2: {"id": 2, "name": "Smartphone", "price": 2300.00},
@@ -17,5 +17,6 @@ def get_product(product_id):
     return jsonify(product)
 
 if __name__ == '__main__':
-    # Uruchamiamy serwer na porcie 8001
+   
     app.run(port=8001)
+
